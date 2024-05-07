@@ -42,7 +42,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Data-Juicer API Reference</span></p>
+              <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../data_juicer.core.html">data_juicer.core</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../data_juicer.ops.html">data_juicer.ops</a></li>
@@ -293,6 +293,9 @@
                                           <span class="n">desc</span><span class="o">=</span><span class="n">op_name</span> <span class="o">+</span> <span class="s1">&#39;_compute_stats&#39;</span><span class="p">)</span>
                     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">use_checkpoint</span><span class="p">:</span>
                         <span class="n">prev</span> <span class="o">=</span> <span class="n">dataset</span>
+                    <span class="k">if</span> <span class="n">op</span><span class="o">.</span><span class="n">stats_export_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">exporter</span><span class="o">.</span><span class="n">export_compute_stats</span><span class="p">(</span>
+                            <span class="n">dataset</span><span class="p">,</span> <span class="n">op</span><span class="o">.</span><span class="n">stats_export_path</span><span class="p">)</span>
                     <span class="n">tmp</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">process</span><span class="p">,</span>
                                          <span class="n">num_proc</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">np</span><span class="p">,</span>
                                          <span class="n">desc</span><span class="o">=</span><span class="n">op_name</span> <span class="o">+</span> <span class="s1">&#39;_process&#39;</span><span class="p">)</span>
@@ -367,7 +370,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Data-Juicer Team.</p>
+    <p>&#169; Copyright 2024, Data-Juicer Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
