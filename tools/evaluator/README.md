@@ -10,7 +10,7 @@ Automatically evaluate your model and monitor changes of metrics during the trai
 
 3. Install Data-Juicer in the shared file system (e.g., `/mnt/shared/code/data-juicer`).
 
-4. Install thirdparty dependencies (Megatron-LM and HELM) accoroding to [thirdparty/README.md](../../thirdparty/README.md) on each machine.
+4. Install thirdparty dependencies (Megatron-LM and HELM) according to [thirdparty/README.md](../../thirdparty/README.md) on each machine.
 
 5. Prepare your dataset and tokenizer, preprocess your dataset with Megatron-LM into mmap format (see [README](../../thirdparty/Megatron-LM/README.md) of Megatron-LM for more details) in the shared file system (e.g., `/mnt/shared/dataset`).
 
@@ -69,7 +69,7 @@ auto_eval:
     merge_path: <str>      # configuration for gpt2 tokenizer type, path to merge file
     tokenizer_path: <str>  # configuration for sentencepiece tokenizer type, path to model file
     max_tokens: <int>      # max tokens to generate in inference
-    token_per_iteration: <float> # billions tokens per iteraion
+    token_per_iteration: <float> # billions tokens per iteration
   helm:
     helm_spec_template_path: <str> # path of helm spec template file, default is tools/evaluator/config/helm_spec_template.conf
     helm_output_path: <str>  # path of helm output dir

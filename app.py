@@ -384,13 +384,13 @@ class Visualize:
             all_conds = np.all([list(cond.values())[0] for cond in conds],
                                axis=0)
         ds = pd.DataFrame(dataset)
-        Visualize.display_dataset(ds, all_conds, show_num, 'Retained sampels',
+        Visualize.display_dataset(ds, all_conds, show_num, 'Retained samples',
                                   'docs')
         st.download_button('Download Retained data as JSONL',
                            data=convert_to_jsonl(ds.loc[all_conds]),
                            file_name='retained.jsonl')
         Visualize.display_dataset(ds, np.invert(all_conds), show_num,
-                                  'Discarded sampels', 'docs')
+                                  'Discarded samples', 'docs')
         st.download_button('Download Discarded data as JSONL',
                            data=convert_to_jsonl(ds.loc[np.invert(all_conds)]),
                            file_name='discarded.jsonl')
@@ -747,10 +747,10 @@ class Visualize:
         col1, col2 = st.columns(2)
         with col1:
             with st.expander('Quality Scorer', expanded=False):
-                wiki_socre_btn = st.button('Run Wiki-score classifier',
+                wiki_score_btn = st.button('Run Wiki-score classifier',
                                            use_container_width=True)
 
-                if wiki_socre_btn:
+                if wiki_score_btn:
                     st.warning('No support for now')
 
                 wikibook_score_btn = st.button('Run WikiBook-score classifier',

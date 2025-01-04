@@ -51,7 +51,7 @@ def main(src_dir,
     serialized. Default it's 'text'.
     :param serialized_key: the key corresponding to the field that the
         serialized info saved. Default it's 'source_info'.
-    :param num_proc: number of process worke. Default it's 1.
+    :param num_proc: number of process worker. Default it's 1.
     """
 
     assert isinstance(

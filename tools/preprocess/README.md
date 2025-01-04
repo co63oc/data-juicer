@@ -163,6 +163,6 @@ python tools/preprocess/serialize_meta.py --help
 ```
 - `src_dir`: path to store jsonl files.
 - `target_dir`: path to save the converted jsonl files.
-- `text_key`: the key corresponding to the field that will not be serialized. Defaul it's 'text'.
+- `text_key`: the key corresponding to the field that will not be serialized. Default it's 'text'.
 - `serialized_key`: the key corresponding to the field that the serialized info saved. Default it's 'source_info'.
 - `num_proc` (optional): number of process workers. Default it's 1.
